@@ -27,3 +27,9 @@ const float VELOCIDADE_MAX_VENTO = 30.0;
 float calcularVelocidadeVento(float valorVento) {
   return valorVento / VALOR_MAX_ADC * VELOCIDADE_MAX_VENTO;
 }
+
+const float RADIACAO_SOLAR_MAX = 4000.0;
+
+float calcularRadiacaoSolar(float valorRadiacao) {
+  return valorRadiacao / VALOR_MAX_ADC * RADIACAO_SOLAR_MAX;
+}

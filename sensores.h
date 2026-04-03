@@ -6,6 +6,7 @@
 #define PINO_DHT 15
 #define TIPO_DHT DHT22
 #define PINO_ANEMOMETRO 35
+#define PINO_LDR 34
 
 DHT dht(PINO_DHT, TIPO_DHT);
 
@@ -20,5 +21,6 @@ DadosMeteorologicos lerSensores() {
   dados.pressao = simularPressaoAtmosferica();
   dados.pontoOrvalho = calcularPontoOrvalho(dados.temperatura, dados.umidade);
   dados.velocidadeVento = calcularVelocidadeVento(analogRead(PINO_ANEMOMETRO));
+  dados.radiacaoSolar = calcularRadiacaoSolar(analogRead(PINO_LDR));
   return dados;
 }
