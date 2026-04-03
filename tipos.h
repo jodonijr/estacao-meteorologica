@@ -8,5 +8,5 @@ struct DadosMeteorologicos {
   float pontoOrvalho;    // °C (calcular)
   float velocidadeVento; // m/s (ler do potenciômetro)
   float radiacaoSolar;   // KJ/m² (ler do LDR)
-  float chuvaAcumulada;  // mm (calcular via interrupção do botão)
+  float chuvaAcumulada;  // mm (calcular via pressionamento do botão)
 };

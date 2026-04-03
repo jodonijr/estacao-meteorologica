@@ -16,5 +16,6 @@ void loop() {
   Serial.printf("orvalho: %.1f C\n", dados.pontoOrvalho);
   Serial.printf("vento: %.1f m/s\n", dados.velocidadeVento);
   Serial.printf("radiacao: %1.f KJ/m2\n", dados.radiacaoSolar);
+  Serial.printf("chuva: %1.f mm\n", dados.chuvaAcumulada);
   delay(1000);
 }
