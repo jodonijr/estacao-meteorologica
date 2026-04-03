@@ -1,6 +1,7 @@
 #pragma once
 #include <DHT.h>
 #include "tipos.h"
+#include "calculos.h"
 
 #define PINO_DHT 15
 #define TIPO_DHT DHT22
@@ -11,9 +12,10 @@ void iniciarSensores() {
   dht.begin();
 }
 
-DadosMetereologicos lerSensores() {
-  DadosMetereologicos dados;
+DadosMeteorologicos lerSensores() {
+  DadosMeteorologicos dados;
   dados.temperatura = dht.readTemperature();
   dados.umidade = dht.readHumidity();
+  dados.pressao = simularPressaoAtmosferica();
   return dados;
 }

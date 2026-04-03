@@ -8,9 +8,10 @@ void setup() {
 }
 
 void loop() {
-  DadosMeteorologicos d = lerSensores();
+  DadosMeteorologicos dados = lerSensores();
   Serial.println("> dados sensores:");
-  Serial.printf("temperatura: %.1f C\n", d.temperatura);
-  Serial.printf("umidade: %.1f %%\n", d.umidade);
+  Serial.printf("temperatura: %.1f C\n", dados.temperatura);
+  Serial.printf("umidade: %.1f %%\n", dados.umidade);
+  Serial.printf("pressao: %.1f hPa (simulada)", dados.pressao);
   delay(1000);
 }
