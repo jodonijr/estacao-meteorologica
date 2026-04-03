@@ -20,3 +20,10 @@ float calcularPontoOrvalho(float temp, float umidade) {
   float alpha = log(umidade / 100.0) + ((MAGNUS_A * temp) / (MAGNUS_B + temp));
   return (MAGNUS_B * alpha) / (MAGNUS_A - alpha);
 }
+
+const float VALOR_MAX_ADC = 4095.0;
+const float VELOCIDADE_MAX_VENTO = 30.0;
+
+float calcularVelocidadeVento(float valorVento) {
+  return valorVento / VALOR_MAX_ADC * VELOCIDADE_MAX_VENTO;
+}
