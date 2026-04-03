@@ -1,10 +1,16 @@
+#include "tipos.h"
+#include "sensores.h"
+
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(115200);
-  Serial.println("Hello, ESP32!");
+  iniciarSensores();
+  Serial.println("> estacao meteorologica iniciada <");
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  delay(10); // this speeds up the simulation
+  DadosMeteorologicos d = lerSensores();
+  Serial.println("> dados sensores:");
+  Serial.printf("temperatura: %.1f C\n", d.temperatura);
+  Serial.printf("umidade: %.1f %%\n", d.umidade);
+  delay(1000);
 }
