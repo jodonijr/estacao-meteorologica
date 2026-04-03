@@ -12,6 +12,7 @@ void loop() {
   Serial.println("> dados sensores:");
   Serial.printf("temperatura: %.1f C\n", dados.temperatura);
   Serial.printf("umidade: %.1f %%\n", dados.umidade);
-  Serial.printf("pressao: %.1f hPa (simulada)", dados.pressao);
+  Serial.printf("pressao: %.1f hPa (simulada)\n", dados.pressao);
+  Serial.printf("orvalho: %.1f C\n", dados.pontoOrvalho);
   delay(1000);
 }

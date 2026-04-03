@@ -17,5 +17,6 @@ DadosMeteorologicos lerSensores() {
   dados.temperatura = dht.readTemperature();
   dados.umidade = dht.readHumidity();
   dados.pressao = simularPressaoAtmosferica();
+  dados.pontoOrvalho = calcularPontoOrvalho(dados.temperatura, dados.umidade);
   return dados;
 }
